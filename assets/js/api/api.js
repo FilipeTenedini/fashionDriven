@@ -1,7 +1,10 @@
+const BASE = 'https://mock-api.driven.com.br/api/v4/shirts-api/shirts';
+const data = {};
+
 const apiRequests = {
 
     get: () => {
-        fetch('https://mock-api.driven.com.br/api/v4/shirts-api/shirts')
+        fetch(`${BASE}`)
         .then(response => response.json())
         .then((json) => {
             const lastOrders = json.slice(0,10);
@@ -24,8 +27,17 @@ const apiRequests = {
     },
 
     post: () => {
-        console.log('e');
+        fetch(BASE,{
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {'Content-type': 'application/json'}
+        })
+        .then()
+        .then(() => apiRequests.get())
+        .catch(e => console.log(e));
     }
 }
 
 apiRequests.get();
+
+export { data, apiRequests };
