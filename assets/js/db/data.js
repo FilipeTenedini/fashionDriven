@@ -8,7 +8,6 @@ const allItems = [
     {type: 'material', id: 7, src: 'Seda', model: 'silk', name: 'Seda'},
     {type: 'material', id: 8, src: 'Algodão', model: 'cotton', name: 'Algodão'},
     {type: 'material', id: 9, src: 'Poliester', model: 'polyester', name: 'Poliéster'}
-]
-
+];
 
 export { allItems }

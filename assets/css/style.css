@@ -16,7 +16,7 @@ body{
     font-family: 'roboto', 'Courier New', Courier, monospace;
 }
 header{
-    width: calc(100vw - 15px);
+    width: 100%;
     height: 89px;
     background-color: var(--main);
 }
@@ -37,7 +37,7 @@ header{
 
 
 .container{
-    width: calc(100vw - 15px);
+    width: 100%;
     display: flex;
 }
 .container main,
@@ -51,7 +51,6 @@ main{
     align-items: center;
 }
 .choice-type{
-    width: 400px;
     margin: 40px 0 ;
 }
 p{
@@ -72,6 +71,9 @@ ul li{
     flex-direction: column;
     align-items: center;
 }
+ul li:last-child{
+    margin-right: 0;
+}
 .list-option{
     width: 100px;
     height: 100px;
@@ -81,11 +83,8 @@ ul li{
     justify-content: center;
     align-items: center;
 }
-ul li:last-child{
-    margin-right: 0;
-}
-.list-option{
-    margin-bottom: 10px;
+.list-option img{
+    border-radius: 50%;
 }
 .item-name{
     width: 113px;
@@ -115,7 +114,9 @@ button{
     border: none;
     cursor: pointer;
 }
-
+.funcional{
+    background-color: var(--main);
+}
 
 aside{
     background-color: var(--main);
@@ -137,12 +138,14 @@ footer{
     height: 350px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--details);
 }
 .last-orders{
     width: 100vw;
     max-width: 1035px;
-    margin: 0   auto;
+    display: flex;
+    flex-direction: column;
 }
 .last-orders--txt{
     margin-top: 30px;
@@ -163,6 +166,7 @@ footer{
     margin-right: 16px;
     border-radius: 10px;
     background-color: var(--white);
+    cursor: pointer;
 }
 .last-orders-model:last-child{
     margin-right: 0;
@@ -174,4 +178,11 @@ footer{
 }
 .last-orders-model p{
     margin-bottom: 0;
+}
+
+
+
+.selected{
+    -webkit-box-shadow: inset 0px 0px 0px 3px var(--main); 
+    box-shadow: inset 0px 0px 0px 3px var(--main); 
 }

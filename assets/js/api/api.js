@@ -5,8 +5,8 @@ const apiRequests = {
         .then(response => response.json())
         .then((json) => {
             const lastOrders = json.slice(0,10);
-            console.log(lastOrders)
             const lastOrdersSpace = document.querySelector('.last-orders--models');
+
             lastOrdersSpace.innerHTML = '';
 
             lastOrders.forEach(element => {
@@ -16,11 +16,15 @@ const apiRequests = {
                     <p>Criador: ${element.owner}</p>
                 </div>    
                 
-                `
+                `;
             });
             
         })
         .catch(e => console.log(e))
+    },
+
+    post: () => {
+        console.log('e');
     }
 }
 
