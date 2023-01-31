@@ -11,7 +11,4 @@ allItems.forEach((item)=>{
     `
 });
 
-
-
-
 export { };

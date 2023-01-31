@@ -7,8 +7,10 @@
     --main: #404EED;
     --bg: #FCFCFC;
     --details: #F2F2F2;
+    --darkDetails: #818181;
     --button: #C4C4C4;
     --black: #000;
+    --white: #FFF;
 }
 body{
     font-family: 'roboto', 'Courier New', Courier, monospace;
@@ -30,9 +32,12 @@ header{
     height: 56px;
     margin-left: 80px;
 }
+
+
+
+
 .container{
     width: calc(100vw - 15px);
-    height: 785px;
     display: flex;
 }
 .container main,
@@ -47,7 +52,7 @@ main{
 }
 .choice-type{
     width: 400px;
-    margin-top: 38px;
+    margin: 40px 0 ;
 }
 p{
     font-size: 18px;
@@ -82,14 +87,36 @@ ul li:last-child{
 .list-option{
     margin-bottom: 10px;
 }
-.list-option img{
-    width: 80px;
-    height: 80px;
-}
 .item-name{
     width: 113px;
     text-align: center;
 }
+.model-link{
+    width: 100%;
+    max-width: 396px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+    color: var(--darkDetails);
+    background-color: var(--details);
+    margin-bottom: 23px;
+    outline: none;
+    border: none;
+}
+button{
+    width: 100%;
+    max-width: 396px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 400;
+    background-color: var(--button);
+    border: none;
+    cursor: pointer;
+}
+
+
 aside{
     background-color: var(--main);
     display: flex;
@@ -101,4 +128,50 @@ aside img{
     max-width: 607px;
     height: 100%;
     max-height: 700px;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--details);
+}
+.last-orders{
+    width: 100vw;
+    max-width: 1035px;
+    margin: 0   auto;
+}
+.last-orders--txt{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.last-orders--models{
+    display: flex;
+    overflow-x: scroll;
+}
+.last-orders-model{
+    width: 201px;
+    height: 235px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 16px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+.last-orders-model:last-child{
+    margin-right: 0;
+}
+.last-orders-model img{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 9px;
+}
+.last-orders-model p{
+    margin-bottom: 0;
 }
