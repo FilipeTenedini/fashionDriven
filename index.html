@@ -20,6 +20,26 @@
         </div>
     </header>
     <div class="container">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="symbols-area">
+                    <div class="circle"> <p>Bom ter você aqui! :)</p></div>
+                    <div class="square"></div>
+                </div>
+
+                <section class="login-area">
+                    <p class="login-txt">login</p>
+                    <label>
+                        username
+                        <input type="text" name="" class="user-name">
+                    </label>
+                    <button class="login-btn">login</button>
+                </section>
+            </div>
+            <div class="loading hidden">
+                <img src="./assets/images/symbol.svg" alt="">
+            </div>
+        </div>
         <main>
             <div class="choice-type">
                 <p>Escolha o modelo</p>
@@ -37,7 +57,7 @@
                 <p>Imagem de referência</p>
                 <div class="bar"></div>
                 <input type="text" class="model-link" placeholder="Insira o link">
-                <button disabled>confirmar pedido</button>
+                <button disabled class="confirm">confirmar pedido</button>
             </div>
         </main>
         <aside>

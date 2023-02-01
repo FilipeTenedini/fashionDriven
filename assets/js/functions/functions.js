@@ -5,7 +5,7 @@ function verifyQt(){
     const maxQt = 3;
 
     if (verifiedQt === maxQt){
-        const button = document.querySelector('button')
+        const button = document.querySelector('.confirm')
         button.removeAttribute('disabled');
         button.classList.add('funcional');
     }
@@ -22,7 +22,7 @@ function verifyUrl(url){
 }
 
 function updateObject(){
-    const image = document.querySelector('input').value;
+    const image = document.querySelector('.model-link').value;
     if (verifyUrl(image)){
         const [model, neck, material] = document.querySelectorAll('.selected');
 
@@ -30,12 +30,7 @@ function updateObject(){
         data.neck = neck.parentNode.getAttribute('model');
         data.material = material.parentNode.getAttribute('model');
         data.image = image;
-        data.owner = '';
-        data.author = '';
-
         apiRequests.post();
     }
-    // pegar valor do autor e owner
-    //salvar o id da requisição post no localStorage.
 }
 export { verifyQt, verifyUrl, updateObject };

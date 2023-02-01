@@ -7,12 +7,11 @@ const apiRequests = {
         fetch(`${BASE}`)
         .then(response => response.json())
         .then((json) => {
-            const lastOrders = json.slice(0,10);
+            document.querySelector('.modal').classList.add('hidden');
             const lastOrdersSpace = document.querySelector('.last-orders--models');
-
             lastOrdersSpace.innerHTML = '';
 
-            lastOrders.forEach(element => {
+            json.forEach(element => {
                 lastOrdersSpace.innerHTML += `
                 <div class="last-orders-model">
                     <img src="${element.image}" alt="">
@@ -37,7 +36,5 @@ const apiRequests = {
         .catch(e => console.log(e));
     }
 }
-
-apiRequests.get();
 
 export { data, apiRequests };
