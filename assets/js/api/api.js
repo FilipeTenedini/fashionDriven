@@ -32,7 +32,12 @@ const apiRequests = {
             headers: {'Content-type': 'application/json'}
         })
         .then()
-        .then(() => apiRequests.get())
+        .then(() => {
+            apiRequests.get();
+            
+            const key = `${data.owner}${localStorage.length}`;
+            localStorage.setItem(key, JSON.stringify(data));
+        })
         .catch(e => console.log(e));
     }
 }
