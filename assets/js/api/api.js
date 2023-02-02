@@ -13,16 +13,16 @@ const apiRequests = {
 
             json.forEach(element => {
                 lastOrdersSpace.innerHTML += `
-                <div class="last-orders-model">
-                    <img src="${element.image}" alt="">
+                <li class="last-orders-model">
+                    <img src="${element.image}" alt="tshirt picture">
                     <p>Criador: ${element.owner}</p>
-                </div>    
+                </li>    
                 
                 `;
             });
             
         })
-        .catch(e => console.log(e))
+        .catch(e => console.log('ezinhu'))
     },
 
     post: () => {
@@ -32,12 +32,7 @@ const apiRequests = {
             headers: {'Content-type': 'application/json'}
         })
         .then()
-        .then(() => {
-            apiRequests.get();
-            
-            const key = `${data.owner}${localStorage.length}`;
-            localStorage.setItem(key, JSON.stringify(data));
-        })
+        .then(() => apiRequests.get())
         .catch(e => console.log(e));
     }
 }

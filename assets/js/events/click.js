@@ -1,5 +1,6 @@
 import { verifyQt, updateObject } from "../functions/functions.js";
 import { data, apiRequests } from "../api/api.js";
+import { renderCartModal } from '../renderhtml/modals.js';
 
 
 document.querySelector('.login-btn').addEventListener('click', () => {
@@ -12,7 +13,6 @@ document.querySelector('.login-btn').addEventListener('click', () => {
         data.owner = name;
         data.author = name;
 
-        sessionStorage.setItem(name, name)
         apiRequests.get();
     }
 });
@@ -35,7 +35,17 @@ document.querySelectorAll('li').forEach(item => {
 
 document.querySelector('.confirm').addEventListener('click', () => {
     updateObject();
+
+    const key = `${data.owner}${localStorage.length}`;
+    localStorage.setItem(key, JSON.stringify(data));
 });
 
-
+document.querySelector('.cart-space').addEventListener('click', ()=> {
+    if (localStorage.length === 0 ){
+        alert('Você ainda não criou nenhum ítem');
+    } else {
+        renderCartModal();
+    }
+    
+});
 export {  }

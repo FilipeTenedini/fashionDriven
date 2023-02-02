@@ -13,11 +13,11 @@ function verifyQt(){
 
 function verifyUrl(url){
     try{
-        const validUrl = new URL(url)
-        console.log(validUrl)
-        return true
+        const validUrl = new URL(url);
+        return true;
     } catch {
-        return false
+        alert('link inválido');
+        return false;
     }
 }
 
@@ -30,6 +30,7 @@ function updateObject(){
         data.neck = neck.parentNode.getAttribute('model');
         data.material = material.parentNode.getAttribute('model');
         data.image = image;
+        
         apiRequests.post();
     }
 }
