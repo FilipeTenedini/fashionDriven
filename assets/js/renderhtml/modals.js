@@ -28,9 +28,11 @@ function renderClientItems(){
 
     
     for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i)
+        const key = localStorage.key(i);
+
         if (key.includes(data.owner)){
-            const item = JSON.parse(localStorage.getItem(key))
+            const item = JSON.parse(localStorage.getItem(key));
+            
             clientItems.innerHTML+=`
                 <div class="client-product">
                     <div class="product-img">

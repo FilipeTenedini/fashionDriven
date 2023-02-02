@@ -18,6 +18,18 @@
 body{
     font-family: 'roboto', 'Courier New', Courier, monospace;
 }
+body::-webkit-scrollbar{
+    width:5px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--darkPurple);        /* color of the tracking area */
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: var(--login);    /* color of the scroll thumb */
+    border-radius: 3px;        /* roundness of the scroll thumb*/
+    }
+
+
 .bar{
     width: 90px;
     height: 2px;
@@ -172,18 +184,33 @@ footer{
     max-width: 1035px;
     display: flex;
     flex-direction: column;
+    padding: 0 25px;
+    position: relative;
 }
 .last-orders--txt{
     margin-top: 30px;
+}
+.last-orders ion-icon{
+    position: absolute;
+    top: 50%;
+    color: var(--main);
+    font-size: 26px;
+    cursor: pointer;
+}
+.left-scroll{
+    left:-10px;
+}
+.right-scroll{
+    right: -10px;
 }
 .last-orders--models{
     display: flex;
     overflow-x: scroll;
     position: relative;
 }
-.last-orders--models::-webkit-scrollbar{
+/* .last-orders--models::-webkit-scrollbar{
     display: none;
-}
+} */
 .last-orders-model{
     width: 201px;
     height: 235px;
@@ -396,7 +423,7 @@ label{
 .cart-header{
     width: 100%;
 }
-.cart-header p{
+.cart-header p, .empty-cart{
     color: var(--white);
     text-align: center;
     font-size: 14px;
@@ -407,9 +434,21 @@ label{
 }
 .client-items{
     width: 100%;
+    max-height: 411px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
+.client-items::-webkit-scrollbar{
+    width:5px;
+}
+.client-items::-webkit-scrollbar-track {
+    background: var(--darkPurple);        /* color of the tracking area */
+  }
+.client-items::-webkit-scrollbar-thumb {
+    background-color: var(--login);    /* color of the scroll thumb */
+    border-radius: 3px;        /* roundness of the scroll thumb*/
+    }
 .client-product{
     display: flex;
     justify-content: space-around;
