@@ -46,6 +46,8 @@ document.querySelector('.cart-space').addEventListener('click', ()=> {
     } else {
         renderCartModal();
     }
-    
 });
+
+const cart = document.querySelector('.cart-area');
+cart.addEventListener('click', () => cart.classList.add('hidden'));
 export {  }

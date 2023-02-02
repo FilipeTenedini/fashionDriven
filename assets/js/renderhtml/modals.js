@@ -35,6 +35,7 @@ function renderClientItems(){
                 <div class="client-product">
                     <div class="product-img">
                         <img src="${item.image}" alt="t-shirt picture">
+                        <p>Estampa</p>
                     </div>
                     <div class="product-details">
                         <img src="./assets/images/${item.material}.png" alt="">
