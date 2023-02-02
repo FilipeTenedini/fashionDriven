@@ -168,5 +168,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Requisição a API
 	- Pude aprender como renderizar dados trazidos do servidor bem como enviar dados para o servidor
-	- Utiizei a biblioteca axios e estudei sobre fetch.
-- Emmet HTML
+	- Utiizei requisição nativa do javascript fetch()
+- Aprendi sobre storages e apliquei área do cliente utilizando localStorage
