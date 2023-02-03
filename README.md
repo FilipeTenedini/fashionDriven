@@ -1,8 +1,10 @@
 
 
 # - Projeto Extra Driven Education Bootcamp 
-  - ### (Para quem quiser fazer)
-
+  - ### (Para quem quiser fazer - Não obrigatório)
+	- Apenas desktop.
+	
+	
 ### Você pode acessar a aplicação neste link:
   ### - <a href="https://filipetenedini.github.io/fashionDriven/"> Fashion Driven </a>
 <br><br><br>
