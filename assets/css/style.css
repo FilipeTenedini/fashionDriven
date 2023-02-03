@@ -15,6 +15,9 @@
     --login: #DCE2F0;
     --overlay: rgba(0, 0, 0, 0.7);
 }
+
+
+
 body{
     font-family: 'roboto', 'Courier New', Courier, monospace;
 }
@@ -173,10 +176,11 @@ aside img{
 
 footer{
     width: 100%;
-    height: 350px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--details);
 }
 .last-orders{
@@ -208,9 +212,16 @@ footer{
     overflow-x: scroll;
     position: relative;
 }
-/* .last-orders--models::-webkit-scrollbar{
-    display: none;
-} */
+.last-orders--models::-webkit-scrollbar{
+    height:5px;
+}
+.last-orders--models::-webkit-scrollbar-track {
+    background: var(--darkPurple);        /* color of the tracking area */
+  }
+.last-orders--models::-webkit-scrollbar-thumb {
+    background-color: var(--login);    /* color of the scroll thumb */
+    border-radius: 3px;        /* roundness of the scroll thumb*/
+}
 .last-orders-model{
     width: 201px;
     height: 235px;
@@ -448,7 +459,7 @@ label{
 .client-items::-webkit-scrollbar-thumb {
     background-color: var(--login);    /* color of the scroll thumb */
     border-radius: 3px;        /* roundness of the scroll thumb*/
-    }
+}
 .client-product{
     display: flex;
     justify-content: space-around;

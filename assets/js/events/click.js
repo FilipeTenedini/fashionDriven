@@ -41,38 +41,32 @@ document.querySelector('.confirm').addEventListener('click', () => {
 });
 
 document.querySelector('.cart-space').addEventListener('click', () => {
-    if (localStorage.length === 0 ){
-        alert('Você ainda não criou nenhum ítem');
-    } else {
-        renderCartModal();
-    }
+    renderCartModal();
 });
 
 const cart = document.querySelector('.cart-area');
 cart.addEventListener('click', () => cart.classList.add('hidden'));
 
 const rightScroll = document.querySelector('.right-scroll');
-
 rightScroll.addEventListener('click', () => {
     const scrollArea = document.querySelector('.last-orders--models');
     const scrollTo = scrollArea.scrollWidth - scrollArea.offsetWidth;
 
-    console.log(scrollArea.offsetWidth)
     scrollArea.scroll({
         left: scrollTo,
         behavior: 'smooth'
-    })
+    });
 });
 
 const leftScroll = document.querySelector('.left-scroll');
 
 leftScroll.addEventListener('click', () => {
     const scrollArea = document.querySelector('.last-orders--models');
-    console.log(scrollArea.offsetWidth)
+    
     scrollArea.scroll({
         left: 0,
         behavior: 'smooth'
-    })
+    });
 });
 
 export {  }

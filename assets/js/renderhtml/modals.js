@@ -25,7 +25,7 @@ renderClientItems();
 
 function renderClientItems(){
     const clientItems = document.querySelector('.client-items');
-
+    let numberOfClientItems = 0;
     
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -53,8 +53,14 @@ function renderClientItems(){
                     </div>
                 </div>
             `;
+            numberOfClientItems += 1;
         }
-      }
+    }
+    if (numberOfClientItems < 1){
+        document.querySelector('.empty-cart').classList.remove('hidden');
+        document.querySelector('.client-items').classList.add('hidden');
+
+    }
 }
 
 
