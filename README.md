@@ -7,6 +7,8 @@
 	
 ### Você pode acessar a aplicação neste link:
   ### - <a href="https://filipetenedini.github.io/fashionDriven/"> Fashion Driven </a>
+  ### - <a href="https://www.figma.com/file/8mFZTdJTsPLSmwcfWydmR4/Projeto-Fashion-Driven?node-id=0%3A1"> Figma </a>
+  
 <br><br><br>
 <p align="center">
   |&nbsp;&nbsp;&nbsp<a href="#Projeto">Projeto</a>&nbsp;&nbsp;
